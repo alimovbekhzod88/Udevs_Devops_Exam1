@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: task6
+  name: task6
+  namespace: exam-30
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task6
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: task6
+    spec:
+      containers:
+      - image: nvrbckdown/flask-app:v1
+        name: flask-app
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}

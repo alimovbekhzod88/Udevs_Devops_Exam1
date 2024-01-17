@@ -1,0 +1,12 @@
+kubectl run nginx1 --image nginx -n exam-30
+kubectl run nginx2 --image nginx -n exam-30
+
+kubectl get pods nginx1 -n exam-30 -o yaml > nginx1.yaml
+kubectl get pods nginx2 -n exam-30 -o yaml > nginx2.yaml
+
+kubectl apply -f nginx1.yaml -n exam-30
+kubectl apply -f nginx2.yaml -n exam-30
+
+kubectl get pods --namespace=exam-30 --show-labels
+
+

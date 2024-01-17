@@ -1,0 +1,5 @@
+kubectl create secret generic database --from-literal DB_URI=postgres://admin:supersecret@10.10.10.1:5432/exam-db -n exam-30 --dry-run=client -o yaml > database_secret.yaml
+
+kubectl apply -f database_secret.yaml -n exam-30
+
+kubectl get secrets -n exam-30

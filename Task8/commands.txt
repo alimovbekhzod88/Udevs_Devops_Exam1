@@ -1,0 +1,8 @@
+kubectl apply -f ~/Desktop/Docker/Udevs_Devops_Exam1/task/frontend-app.yaml -n exam-30
+
+
+kubectl expose deployment frontend-app --type=ClusterIP --port=80 --target-port=80 --name=frontend-app -n exam-30
+
+kubectl exec -it nginx1 -n exam-30 -- sh
+
+curl frontend-app

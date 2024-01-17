@@ -1,0 +1,10 @@
+kubectl delete service task6 -n exam-30
+
+kubectl expose deployment task6 --type=NodePort --port=80 --target-port=5000 --name=task6 -n exam-30
+
+kubectl get svc -n exam-30
+
+kubectl exec -it nginx1 -n exam-30 -- sh
+
+
+curl 10.233.40.168

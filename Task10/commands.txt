@@ -1,0 +1,4 @@
+kubectl apply -f ~/Desktop/Docker/Udevs_Devops_Exam1/task/info.yaml -n exam-30
+
+
+kubectl get configmaps -n exam-30
